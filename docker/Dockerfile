@@ -14,7 +14,9 @@ RUN apt-get update && \
         gnupg \
         avahi-autoipd \
         avahi-daemon \
-        avahi-utils
+        avahi-utils \
+        libgl1-mesa-dev \
+        libglib2.0-0
 
 
 RUN source /root/.bashrc && \
