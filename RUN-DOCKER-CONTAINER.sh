@@ -4,12 +4,12 @@
 
 # Set the Docker container name from a project name (first argument).
 # If no argument is given, use the current user name as the project name.
-if [ -z $ROS_PROJECT_NAME ]; then
-  PROJECT=$ROS_PROJECT_NAME
-  echo "Set ROS_PROJECT_NAME (e.g. 'export ROS_PROJECT_NAME=mytest')"
+if [ -z $DEEP_PROJECT_NAME ]; then
+  PROJECT=$DEEP_PROJECT_NAME
+  echo "Set DEEP_PROJECT_NAME (e.g. 'export DEEP_PROJECT_NAME=mytest')"
   exit 1
 fi
-PROJECT=$ROS_PROJECT_NAME
+PROJECT=$DEEP_PROJECT_NAME
 CONTAINER="${PROJECT}_ros_1"
 echo "$0: PROJECT=${PROJECT}"
 echo "$0: CONTAINER=${CONTAINER}"

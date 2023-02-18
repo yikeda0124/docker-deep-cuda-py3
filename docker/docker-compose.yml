@@ -21,7 +21,6 @@ services:
     shm_size: '8gb'
     volumes:
       # Map repository sources.
-      - ../ros_docker:/root/catkin_ws/src/ros_docker
       - ./scripts:/root/scripts
       - ../work:/root/work
       # Grant display access to X Server.
