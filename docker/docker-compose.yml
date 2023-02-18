@@ -3,8 +3,8 @@ version: "2.4"
 ################################################################################
 
 services:
-  ros:
-    hostname: ros
+  deep:
+    hostname: deep
     runtime: nvidia
     privileged: true
     environment:
