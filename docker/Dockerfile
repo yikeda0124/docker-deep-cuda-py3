@@ -9,6 +9,7 @@ RUN apt-get update && \
         curl \
         git \
         vim \
+        unzip \
         python3-pip \
         lsb-release \
         gnupg \
@@ -20,7 +21,8 @@ RUN apt-get update && \
         libxrandr2 \
         libxcursor1 \
         libglfw3 \
-        libglew2.1
+        libglew2.1 \
+        libxinerama1
 
 
 RUN source /root/.bashrc && \
@@ -38,6 +40,20 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /root
+
+
+# mujocoのインストール
+RUN mkdir /root/.mujoco && \
+    cd /root/.mujoco && \
+    wget https://www.roboti.us/download/mujoco200_linux.zip && \
+    unzip mujoco200_linux.zip && \
+    wget https://www.roboti.us/file/mjkey.txt && \
+    cp mjkey.txt mujoco200_linux/bin && \
+    cp -r mujoco200_linux mujoco200
+
+RUN echo "export LD_LIBRARY_PATH=/root/.mujoco/mujoco200/bin${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> /root/.bashrc
+RUN echo "export MUJOCO_KEY_PATH=/root/.mujoco${MUJOCO_KEY_PATH}" >> /root/.bashrc
+
 
 ENTRYPOINT []
 
