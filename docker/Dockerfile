@@ -16,7 +16,11 @@ RUN apt-get update && \
         avahi-daemon \
         avahi-utils \
         libgl1-mesa-dev \
-        libglib2.0-0
+        libglib2.0-0 \
+        libxrandr2 \
+        libxcursor1 \
+        libglfw3 \
+        libglew2.1
 
 
 RUN source /root/.bashrc && \
