@@ -23,7 +23,6 @@ services:
       # Map repository sources.
       - ./scripts:/root/scripts
       - ../work:/root/work
-      - ../conda:/conda
       # Grant display access to X Server.
       - /tmp/.X11-unix:/tmp/.X11-unix
     network_mode: host

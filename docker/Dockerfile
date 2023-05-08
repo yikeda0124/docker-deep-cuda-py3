@@ -56,10 +56,10 @@ RUN echo "export MUJOCO_KEY_PATH=/root/.mujoco${MUJOCO_KEY_PATH}" >> /root/.bash
 
 
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-    sh Miniconda3-latest-Linux-x86_64.sh -b -p /conda/miniconda3 && \
+    sh Miniconda3-latest-Linux-x86_64.sh -b -p /opt/miniconda3 && \
     rm -r Miniconda3-latest-Linux-x86_64.sh
 
-ENV PATH /conda/miniconda3/bin:$PATH
+ENV PATH /opt/miniconda3/bin:$PATH
 
 
 ENTRYPOINT []
