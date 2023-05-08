@@ -61,16 +61,6 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
 
 ENV PATH /opt/miniconda3/bin:$PATH
 
-COPY <env_file_name>.yml .
-
-RUN pip install --upgrade pip && \
-    conda update -n base -c defaults conda && \
-    conda env create -n <env_name> -f <env_file_name>.yml && \
-    conda init && \
-    echo "conda activate <env_name>" >> ~/.bashrc
-
-ENV CONDA_DEFAULT_ENV <env_name> && \
-    PATH /opt/conda/envs/<env_name>/bin:$PATH
 
 ENTRYPOINT []
 
