@@ -1,19 +1,16 @@
-# docker-cuda-cuda-py3
-cuda11.7 + pytorch
+# LeRobot docker
+cuda11.8
 
 ## build docker image
 
 ```
-$ export DEEP_PROJECT_NAME=hoge
+$ export LEBOT_PROJECT_NAME=hoge
 $ ./BUILD-DOCKER-IMAGE.sh
 ```
-your docker image name will be `hoge_deeo`
-
 
 ## run docker container
 
 ```
-$ export DEEP_PROJECT_NAME=hoge
+$ export LEBOT_PROJECT_NAME=hoge
 $ ./RUN-DOCKER-CONTAINER.sh
 ```
-your docker container name will be `hoge_depp_1`
