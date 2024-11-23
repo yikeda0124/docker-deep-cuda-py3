@@ -3,8 +3,8 @@ version: "2.4"
 ################################################################################
 
 services:
-  lerobot:
-    hostname: lerobot
+  lebot:
+    hostname: lebot
     runtime: nvidia
     privileged: true
     environment:

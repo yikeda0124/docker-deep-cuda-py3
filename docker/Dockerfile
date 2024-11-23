@@ -51,8 +51,8 @@ RUN pip install --upgrade pip && \
 ENV CONDA_DEFAULT_ENV lerobot && \
     PATH /opt/conda/envs/lerobot/bin:$PATH
 
-WORKDIR /root/work
-RUN git clone https://github.com/huggingface/lerobot && \
+RUN cd /root && \
+    git clone https://github.com/huggingface/lerobot && \
     cd lerobot && \
     conda run -n lerobot pip install -e .
     
