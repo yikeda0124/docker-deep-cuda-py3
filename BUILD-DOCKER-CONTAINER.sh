@@ -4,12 +4,12 @@
 
 # Set the Docker container name from a project name (first argument).
 # If no argument is given, use the current user name as the project name.
-if [ -z $DEEP_PROJECT_NAME ]; then
-  echo "Set DEEP_PROJECT_NAME (e.g. 'export DEEP_PROJECT_NAME=mytest')"
+if [ -z $LEBOT_PROJECT_NAME ]; then
+  echo "Set LEBOT_PROJECT_NAME (e.g. 'export LEBOT_PROJECT_NAME=mytest')"
   exit 1
 fi
-PROJECT=$DEEP_PROJECT_NAME
-CONTAINER="${PROJECT}_deep_1"
+PROJECT=$LEBOT_PROJECT_NAME
+CONTAINER="${PROJECT}-lebot-1"
 echo "$0: PROJECT=${PROJECT}"
 echo "$0: CONTAINER=${CONTAINER}"
 

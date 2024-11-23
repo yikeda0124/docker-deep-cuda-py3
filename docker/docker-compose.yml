@@ -3,8 +3,8 @@ version: "2.4"
 ################################################################################
 
 services:
-  deep:
-    hostname: deep
+  lerobot:
+    hostname: lerobot
     runtime: nvidia
     privileged: true
     environment:
